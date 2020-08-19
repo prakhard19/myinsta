@@ -134,7 +134,7 @@ private Bitmap mBitmap;
                     ParseObject parseObject=new ParseObject("Photo");
                     parseObject.put("picture",parseFile);
                     parseObject.put("username", ParseUser.getCurrentUser().getUsername());
-                    final ProgressDialog progressDialog=new ProgressDialog(getApplicationContext());
+                    final ProgressDialog progressDialog=new ProgressDialog(this);
                     progressDialog.setMessage("Loading.....");
                     progressDialog.show();
                     parseObject.saveInBackground(new SaveCallback() {
